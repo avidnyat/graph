@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="jsPlumbToolkit-defaults.css">
+<link rel="stylesheet" href="jsPlumbToolkit-demo.css">
+<link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+<div class="jtk-demo-main">
+<!-- demo -->
+            <div class="jtk-demo-canvas canvas-wide statemachine-demo jtk-surface jtk-surface-nopan" id="canvas" style="position:relative;">
+               <!-- <div class="shape" data-shape="Rectangle">Rectangle</div>
+                <div class="shape" data-shape="Ellipse">Ellipse</div>
+                <div class="shape" data-shape="Circle">Circle</div>
+                <div class="shape" data-shape="Diamond">Diamond</div>
+                <div class="shape" data-shape="Triangle" style="left:700px;top:380px;">Triangle</div>
+                <div class="shape _90" data-shape="Triangle" data-rotation="90" style="left:60px;top:500px;">90&#176; rotation</div>-->
+            </div>
+            <!-- /demo --></div>
+<div class="full-width-container bg-sepia">
+<div class="container">
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    var json = {
+        "Default": {
+            "Orientation": "so_0",
+            "Style": "RoundRect"
+        },
+        "Links": [
+            {
+                "Destination": 3,
+                "Index": 8,
+                "Origin": 2,
+                "Points": [],
+                "Text": "",
+                "Url": 27
+            },
+            {
+                "Destination": 4,
+                "Index": 9,
+                "Origin": 3,
+                "Points": [
+                    "656, 89"
+                ],
+                "Text": "YES",
+                "Url": 28
+            },
+            {
+                "Destination": 6,
+                "Index": 10,
+                "Origin": 5,
+                "Points": [],
+                "Text": "",
+                "Url": 38
+            },
+            {
+                "Destination": 1,
+                "Index": 11,
+                "Origin": 0,
+                "Points": [],
+                "Text": "",
+                "Url": 46
+            },
+            {
+                "Destination": 2,
+                "Index": 12,
+                "Origin": 1,
+                "Points": [],
+                "Text": "ISC REQUIRE",
+                "Url": 47
+            },
+            {
+                "Destination": 0,
+                "Index": 13,
+                "Origin": 1,
+                "Points": [
+                    "166, 36"
+                ],
+                "Text": "NO",
+                "Url": 48
+            },
+            {
+                "Destination": 0,
+                "Index": 14,
+                "Origin": 3,
+                "Points": [
+                    "439, 26",
+                    "163, 26"
+                ],
+                "Text": "NO",
+                "Url": 49
+            },
+            {
+                "Destination": 0,
+                "Index": 15,
+                "Origin": 6,
+                "Points": [
+                    "117, 182"
+                ],
+                "Text": "",
+                "Url": 50
+            },
+            {
+                "Destination": 4,
+                "Index": 17,
+                "Origin": 1,
+                "Points": [
+                    "227, 154",
+                    "546, 154"
+                ],
+                "Text": "NO SQUAD CHECK",
+                "Url": 57
+            },
+            {
+                "Destination": 5,
+                "Index": 18,
+                "Origin": 16,
+                "Points": [],
+                "Text": "",
+                "Url": 58
+            },
+            {
+                "Destination": 19,
+                "Index": 20,
+                "Origin": 7,
+                "Points": [],
+                "Text": "SIGNED / SEALED",
+                "Url": 60
+            },
+            {
+                "Destination": 7,
+                "Index": 21,
+                "Origin": 4,
+                "Points": [],
+                "Text": "FINAL",
+                "Url": 64
+            },
+            {
+                "Destination": 16,
+                "Index": 22,
+                "Origin": 4,
+                "Points": [],
+                "Text": "NO",
+                "Url": 65
+            },
+            {
+                "Destination": 0,
+                "Index": 23,
+                "Origin": 4,
+                "Points": [
+                    "693, 101",
+                    "693, 11",
+                    "84, 11"
+                ],
+                "Text": "NO",
+                "Url": 66
+            },
+            {
+                "Destination": 4,
+                "Index": 24,
+                "Origin": 7,
+                "Points": [
+                    "724, 338",
+                    "724, 153"
+                ],
+                "Text": "NO",
+                "Url": 67
+            }
+        ],
+        "Nodes": [
+            {
+                "FillColor": "SkyBlue",
+                "Height": 70,
+                "Index": 0,
+                "Left": 44,
+                "NodeShape": {
+                    "Orientation": null,
+                    "Style": null
+                },
+                "Text": "ORIGINATOR",
+                "TextColor": "Black",
+                "Top": 54,
+                "Url": 1,
+                "Width": 80
+            },
+            {
+                "FillColor": "SkyBlue",
+                "Height": 72,
+                "Index": 1,
+                "Left": 177.09259,
+                "NodeShape": {
+                    "Orientation": "so_0",
+                    "Style": "Losange"
+                },
+                "Text": "CHECKER",
+                "TextColor": "Black",
+                "Top": 50.8947372,
+                "Url": 3,
+                "Width": 83
+            },
+            {
+                "FillColor": "IndianRed",
+                "Height": 71.30121,
+                "Index": 2,
+                "Left": 340.6322,
+                "NodeShape": {
+                    "Orientation": null,
+                    "Style": null
+                },
+                "Text": "SQUAD CHECK",
+                "TextColor": "Black",
+                "Top": 51.8947334,
+                "Url": 6,
+                "Width": 79.36777
+            },
+            {
+                "FillColor": "Yellow",
+                "Height": 89.47366,
+                "Index": 3,
+                "Left": 462.000031,
+                "NodeShape": {
+                    "Orientation": "so_0",
+                    "Style": "Losange"
+                },
+                "Text": "COMMENTS CONSOLIDATION",
+                "TextColor": "Black",
+                "Top": 44.21052,
+                "Url": 8,
+                "Width": 106.420929
+            },
+            {
+                "FillColor": "IndianRed",
+                "Height": 74,
+                "Index": 4,
+                "Left": 616.4737,
+                "NodeShape": {
+                    "Orientation": "so_0",
+                    "Style": "Losange"
+                },
+                "Text": "PROJECT MANAGER",
+                "TextColor": "Black",
+                "Top": 116.89473,
+                "Url": 9,
+                "Width": 79
+            },
+            {
+                "FillColor": "IndianRed",
+                "Height": 68,
+                "Index": 5,
+                "Left": 338.5263,
+                "NodeShape": {
+                    "Orientation": null,
+                    "Style": null
+                },
+                "Text": "CLIENT COMMENTS",
+                "TextColor": "Black",
+                "Top": 187.89476,
+                "Url": 14,
+                "Width": 80
+            },
+            {
+                "FillColor": "IndianRed",
+                "Height": 66,
+                "Index": 6,
+                "Left": 178.473663,
+                "NodeShape": {
+                    "Orientation": null,
+                    "Style": null
+                },
+                "Text": "REVIEW CLIENT COMMENT",
+                "TextColor": "Black",
+                "Top": 188.631577,
+                "Url": 15,
+                "Width": 80
+            },
+            {
+                "FillColor": "IndianRed",
+                "Height": 72.05255,
+                "Index": 7,
+                "Left": 611.5788,
+                "NodeShape": {
+                    "Orientation": "so_0",
+                    "Style": "Losange"
+                },
+                "Text": "LICENSED ENGINEER",
+                "TextColor": "Black",
+                "Top": 301.6316,
+                "Url": 17,
+                "Width": 88.15793
+            },
+            {
+                "FillColor": "IndianRed",
+                "Height": 66.31581,
+                "Index": 16,
+                "Left": 475.263184,
+                "NodeShape": {
+                    "Orientation": null,
+                    "Style": null
+                },
+                "Text": "DOCUMENT CONTROL",
+                "TextColor": "Black",
+                "Top": 188.421021,
+                "Url": 54,
+                "Width": 80.5262451
+            },
+            {
+                "FillColor": "IndianRed",
+                "Height": 62.63156,
+                "Index": 19,
+                "Left": 297.368378,
+                "NodeShape": {
+                    "Orientation": null,
+                    "Style": null
+                },
+                "Text": "DCC FINAL ISSUE",
+                "TextColor": "Black",
+                "Top": 306.842041,
+                "Url": 59,
+                "Width": 76.3157959
+            }
+        ],
+        "ErrorMsg": null,
+        "Token": "ab3fjucm54ITl6FyeC3ku8OwVZS6eK7YUmj8OjrxJZ6skwGVKBWLjZ/MT42eiCRzGw8NvLhsxqzb1VQNp+2S/dOrG5dKmTwlkaMRJWd2oFi5VGMWZ9XEqxdK9lHOicvBTX+G/4vx/v3jCq5n8AqpOxN5k1RfE2efI752BCY0DgSejykf4WNVksCaQulh0rZ00XetzOqasFMzm58tQ+nqTOZfWjpvOHmnuU4+OqKhUEcnZyeOKySeM2YUqBgPc/V0p9I5kBex28yNv2I1JEuYohqdta9oZCkvhG/DLztrnd87iXOQkYZoByqYQHrdPyj5Z3GMoVbHzIXNQ2Y2V8RLJdNfMkIe0seWQ5FIL2I6H5KyGBCVa6+dsTGMymBW+IecnL/0mIVtrowJ5Iw5YouyGkN2aIAj9NhHIbzG8KDFb1Pk+iSNIScqMI4s62zNmniB6gFBvXjKhx7ziNiR+4fgu43AyE4UP/agKfbOc5spiNKogZnwq1ovewXN4P/tOGWnfCI5KCr7syahbNltan8/CajgbZjNuoD9pM6BME5q/fexFUSPEdUSHdcxmHGxRqIC",
+        "WarningMsg": null
+    }
+    var factor = 50;
+    var topFirst = 200;
+for(var key in json.Nodes){
+    if(key == 0){
+        topFirst = 100;
+        console.log("==========")
+    }else{
+        topFirst = 100;
+    }
+    var divElement = $("<div></div>");
+    divElement.attr("id","a"+key);
+console.log(divElement);
+    divElement.css({"width":json.Nodes[key].Width,"height":json.Nodes[key].Height,"top":(json.Nodes[key].Top+(key*topFirst)),"left":json.Nodes[key].Left+(factor*key),"color":json.Nodes[key].TextColor, "background-color":json.Nodes[key].FillColor,'position':"absolute"})
+    if(json.Nodes[key].NodeShape.Style === "Losange"){
+        divElement.addClass("losange");
+
+        divElement.css({"width":json.Nodes[key].Width,"height":json.Nodes[key].Width,})
+    }
+    divElement.data("color",json.Nodes[key].FillColor);
+    divElement.addClass("shape");
+    divElement.addClass("shape-notallowed");
+    divElement.data("shape","diamond");
+    divElement.data("origin",key);
+    divElement.html("<p>"+json.Nodes[key].Text+"</p><div class='ep' action='a'"+key+"></div>")
+
+    $("#canvas").append(divElement);
+    console.log(key)
+
+
+}
+</script>
+<script src="jsPlumb-2.0.4.js"></script>
+<script src="app1.js"></script>
+  <script>
+      for(var key in json.Nodes){
+          if(json.Nodes[key].NodeShape.Style === "Losange"){
+              divElement.css({"left":divElement.left+140});
+          }
+      }
+  </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+.demo {
+    /* for IE10+ touch devices */
+    touch-action:none;
+}
+
+/** JSPLUMB ARTEFACTS **/
+.jsplumb-connector {
+    z-index:1;
+}
+
+/** COMMON ELEMENT PROPERTIES **/
+.shape {
+    z-index:2;
+    opacity:0.7;
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;
+    font-size: 9px;
+}
+.shape:hover{
+    box-shadow: 0px 0px 25px #000;
+}
+.shape-notallowed{
+    box-shadow: none !important;
+}
+.click-shape{
+    box-shadow: 0px 0px 25px #000;
+}
+/** SHAPES **/
+
+[data-shape=Rectangle] {
+    width:210px;
+    height:70px;
+    left:380px;
+    top:505px;
+    line-height: 70px;
+    background-image:url(rectangle.png);
+}
+
+[data-shape=Ellipse] {
+    width:210px;
+    height:70px;
+    left:250px;
+    top:300px;
+    line-height: 70px;
+    background-image:url(ellipse.png);
+}
+
+[data-shape=Circle] {
+    width:150px;
+    height:150px;
+    left:100px;
+    top:60px;
+    line-height: 150px;
+    background-image:url(circle.png);
+}
+
+[data-shape=Triangle] {
+    width:150px;
+    height:150px;
+    line-height: 150px;
+    background-image:url(triangle.png);
+}
+
+._90[data-shape=Triangle] {
+    width:150px;
+    height:150px;
+    line-height: 150px;
+    background-image:url(triangle_90.png);
+}
+
+[data-shape=Diamond] {
+    width:150px;
+    height:150px;
+    left:550px;
+    top:150px;
+    line-height: 150px;
+    background-image:url(diamond.png);
+}
+
+.losange{
+    display: block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    float: none;
+    z-index: auto;
+
+    position: static;
+    cursor: default;
+    opacity: 1;
+    margin: 3px 0 0 30px;
+    padding: 0;
+    overflow: visible;
+    border: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    font: normal 100%/normal Arial, Helvetica, sans-serif;
+    color: rgba(0,0,0,1);
+
+    background: #1abc9c;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    -webkit-transform: rotateZ(-45deg) translate(18px,45px) ;
+    transform: rotateZ(-45deg) translate(18px,45px)  ;
+    -webkit-transform-origin: 0 100% ;
+    transform-origin: 0 100% ;
+}
+
+.losange p{
+    -webkit-transform: rotate(45deg)   ;
+    transform: rotate(45deg)   ;
+    font-size: 9px;
+    margin-top: 35px;
+    margin-left: 20px;
+}
